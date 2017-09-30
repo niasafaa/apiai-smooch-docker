@@ -22,6 +22,7 @@ class AIRobotClient:
         self.base_url="https://api.api.ai"
         self.token=token
         self.lang=lang
+        self.sessionId=sessionId
         if sessionId==None:
             self.sessionId=str(uuid.uuid4()).replace("-", "")[16:]
 

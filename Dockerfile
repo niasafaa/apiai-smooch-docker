@@ -9,6 +9,7 @@ RUN apt-get update
 ENV PYTHON_VERSION 2.7.11
 ENV PYTHON_PIP_VERSION 8.0.2
 
+RUN apt-get clean && apt-get update && apt-get install -y locales
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en

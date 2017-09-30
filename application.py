@@ -13,7 +13,7 @@ app.config.from_envvar('FLASK_APPLICATION_SETTINGS')
 def get_robot():
     robot_instace = getattr(g, '_robot', None)
     if robot_instace is None:
-        robot_instace = g._robot = AIRobotClient(config=app.config, token=app.config['API_AI_TOKEN'])
+        robot_instace = g._robot = AIRobotClient(config=app.config, token=app.config['API_AI_TOKEN'], sessionId=request.json['messages'][0]['authorId'])
 
     return robot_instace
 
