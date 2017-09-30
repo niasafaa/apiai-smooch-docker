@@ -62,6 +62,19 @@ def init_smooch():
         print create_response
 
 # ========== routes =============
+# @app.route("/pause")
+# def pause():
+#     """
+#     slack command to pause conversation while slack user is responding directly to user
+#     """
+#
+#     slack_post = request.get_json(silent=True, force=True)
+#     print (json.dumps(request.json))
+#     paused_conversations = [].append(slack_post.get("channel_name"))
+#     print (paused_conversations)
+#     return paused_conversations
+#
+# pause()
 @app.route("/hc")
 def hc():
     """
