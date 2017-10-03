@@ -110,7 +110,7 @@ def smooch_events():
     return resp
 
 def main(argv):
-    app.run(host='0.0.0.0', port=int(argv[0]), debug=False)
+    app.run(host='0.0.0.0', port=int(argv[0]), debug=True)
 
 if __name__ == "__main__":
     main(sys.argv[1:])
